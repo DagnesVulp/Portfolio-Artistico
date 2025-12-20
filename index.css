@@ -517,3 +517,100 @@ body.estudio {
     padding: 30px 20px;
   }
 }
+/* =========================
+   SKETCHBOOK
+========================= */
+
+.sketchbook-gallery {
+  column-count: 3;
+  column-gap: 30px;
+  margin-top: 50px;
+}
+
+.sketch-item {
+  break-inside: avoid;
+  margin-bottom: 30px;
+}
+
+.sketch-item img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+  margin-bottom: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.sketch-item img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 215, 120, 0.25);
+}
+
+.sketch-caption {
+  font-size: 0.85em;
+  color: #cfc6b8;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+  .sketchbook-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .sketchbook-gallery {
+    column-count: 1;
+  }
+}
+.sketch-caption {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.sketch-item:hover .sketch-caption {
+  opacity: 1;
+}
+/* =========================
+   PROJECTS (Behance style)
+========================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(120, 255, 220, 0.12);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.project-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #9fffe0;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d0d0d0;
+}
